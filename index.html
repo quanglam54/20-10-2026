@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chúc mừng 20/10 💝</title>
+<meta name="description" content="Chúc mừng ngày Phụ nữ Việt Nam 20/10 — gửi tặng những người phụ nữ thân yêu.">
+<meta property="og:title" content="Chúc mừng ngày Phụ nữ Việt Nam 20/10 💝">
+<meta property="og:description" content="Có một món quà nhỏ dành cho bạn, mở ra xem nhé!">
+<meta name="theme-color" content="#ff4d8d">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💝</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:ital,wght@0,500;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+  :root{
+    --pink:#ff4d8d; --pink-d:#e0306f; --rose:#ff8fb1; --cream:#fff5f8;
+    --ink:#5a1630; --ink-soft:#8c3d5c; --gold:#ffd27a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden}
+  body{
+    font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--ink);
+    background:radial-gradient(ellipse at 50% 35%,#ffe3ee 0%,#ffc2d6 45%,#ff9ec0 100%);
+    -webkit-tap-highlight-color:transparent;user-select:none
+  }
+  #fx{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+  .p{position:absolute;left:0;top:0;will-change:transform,opacity}
+  .p svg{display:block;width:100%;height:100%}
+  .flower{font-size:var(--s);line-height:1}
+  .balloon{width:var(--s);height:calc(var(--s)*1.22)}
+  .balloon .b{width:100%;height:82%;border-radius:50% 50% 48% 48%/55% 55% 45% 45%;
+    background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.75) 0 9%,transparent 22%),var(--c);
+    box-shadow:inset -6px -8px 14px rgba(0,0,0,.12)}
+  .balloon .k{width:0;height:0;margin:-1px auto 0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:7px solid var(--c);transform:rotate(180deg)}
+  .balloon .str{width:1px;height:calc(var(--s)*1.1);margin:0 auto;background:rgba(120,40,70,.35)}
+
+  .scene{position:fixed;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:24px 16px;transition:opacity .8s ease,transform .8s ease}
+  .scene.hide{opacity:0;transform:scale(.94);pointer-events:none}
+
+  .big-heart{position:relative;width:min(84vw,440px);aspect-ratio:1/0.92;cursor:pointer;
+    animation:beat 1.4s ease-in-out infinite;filter:drop-shadow(0 18px 40px rgba(224,48,111,.45))}
+  .big-heart svg{position:absolute;inset:0;width:100%;height:100%}
+  .big-heart .txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:6% 16% 20%;text-align:center;color:#fff}
+  .big-heart .t1{font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(1.6rem,7.4vw,2.7rem);line-height:1.1;
+    text-shadow:0 2px 10px rgba(120,0,40,.35)}
+  .big-heart .t2{font-size:clamp(.72rem,3vw,.95rem);letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-top:10px;opacity:.95}
+  .big-heart .t3{font-family:'Dancing Script',cursive;font-size:clamp(2.2rem,11vw,3.8rem);font-weight:700;color:var(--gold);
+    line-height:1;margin-top:4px;text-shadow:0 3px 12px rgba(120,0,40,.4)}
+  @keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.08)}28%{transform:scale(.98)}42%{transform:scale(1.05)}70%{transform:scale(1)}}
+
+  .btn{margin-top:28px;border:none;cursor:pointer;font:600 1.02rem 'Be Vietnam Pro',sans-serif;color:#fff;
+    background:linear-gradient(135deg,var(--pink),var(--pink-d));padding:15px 34px;border-radius:999px;
+    box-shadow:0 10px 26px rgba(224,48,111,.42),inset 0 1px 0 rgba(255,255,255,.35);
+    transition:transform .2s ease,box-shadow .2s ease;opacity:0;animation:up .9s .9s ease forwards, glow 2.4s 2s ease-in-out infinite}
+  .btn:hover{transform:translateY(-2px) scale(1.03)}
+  .btn:active{transform:scale(.97)}
+  .btn.ghost{background:rgba(255,255,255,.7);color:var(--pink-d);box-shadow:0 6px 18px rgba(224,48,111,.2);animation:none;opacity:1}
+  @keyframes glow{0%,100%{box-shadow:0 10px 26px rgba(224,48,111,.42),0 0 0 0 rgba(255,77,141,.5)}50%{box-shadow:0 10px 26px rgba(224,48,111,.42),0 0 0 14px rgba(255,77,141,0)}}
+  @keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .hint{margin-top:14px;font-size:.8rem;color:var(--ink-soft);opacity:0;animation:up .9s 1.5s ease forwards}
+
+  #poemScene{justify-content:flex-start;overflow-y:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-top:max(28px,env(safe-area-inset-top))}
+  #poemScene::-webkit-scrollbar{display:none}
+  .card{width:100%;max-width:520px;margin:auto 0;background:rgba(255,250,252,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.9);border-radius:28px;padding:34px clamp(12px,4vw,24px) 30px;text-align:center;
+    box-shadow:0 24px 60px rgba(160,20,70,.25)}
+  .card h1{font-family:'Dancing Script',cursive;font-size:clamp(2rem,8vw,2.7rem);color:var(--pink-d);line-height:1.1}
+  .divider{margin:16px auto 20px;color:var(--rose);letter-spacing:.5em;font-size:.9rem}
+  .poem{font-family:'Lora',serif;font-style:italic;font-size:clamp(.88rem,3.8vw,1.14rem);line-height:1.95;color:var(--ink)}
+  .poem .ln{display:block;opacity:0;transform:translateY(10px);filter:blur(4px);transition:opacity .9s ease,transform .9s ease,filter .9s ease}
+  .poem .ln.l8{padding-left:0}
+  .poem .ln{white-space:nowrap}
+  .poem .ln.l6{padding-left:1.4em}
+  .poem .ln.on{opacity:1;transform:none;filter:none}
+  .poem .gap{display:block;height:.9em}
+  .sign{font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--pink-d);margin-top:22px;opacity:0;transition:opacity 1s ease}
+  .sign.on{opacity:1}
+  .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;opacity:0;transition:opacity 1s ease}
+  .actions.on{opacity:1}
+  .actions .btn{margin-top:0;padding:12px 22px;font-size:.92rem;animation:none;opacity:1}
+
+  .music{position:fixed;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:5;width:46px;height:46px;border-radius:50%;
+    border:none;background:rgba(255,255,255,.75);color:var(--pink-d);font-size:1.2rem;cursor:pointer;
+    box-shadow:0 6px 18px rgba(224,48,111,.25)}
+  .music.on{animation:spin 4s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);z-index:6;background:var(--ink);color:#fff;
+    padding:10px 18px;border-radius:999px;font-size:.88rem;opacity:0;transition:opacity .3s;pointer-events:none}
+  .toast.show{opacity:1}
+  @media (prefers-reduced-motion:reduce){.big-heart,.btn,.music.on{animation:none!important}}
+</style>
+</head>
+<body>
+
+<div id="fx"></div>
+
+<section class="scene" id="heartScene">
+  <div class="big-heart" id="bigHeart" title="Chạm vào tim nhé">
+    <svg viewBox="0 0 24 22" aria-hidden="true">
+      <defs>
+        <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ff7aa8"/><stop offset=".55" stop-color="#ff3d7f"/><stop offset="1" stop-color="#d81b60"/>
+        </linearGradient>
+        <radialGradient id="hs" cx=".3" cy=".25" r=".35">
+          <stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path fill="url(#hg)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      <path fill="url(#hs)" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    <div class="txt">
+      <div class="t1">Chúc mừng ngày<br>Phụ nữ Việt Nam</div>
+      <div class="t3">20/10</div>
+    </div>
+  </div>
+  <button class="btn" id="nextBtn">Xem tiếp 💌</button>
+  <div class="hint">Chạm vào bất cứ đâu để thả tim ❤</div>
+</section>
+
+<section class="scene hide" id="poemScene">
+  <div class="card">
+    <h1>Gửi các chị em<br>thân yêu</h1>
+    <div class="divider">❀ ❀ ❀</div>
+    <div class="poem" id="poem"></div>
+    <div class="sign" id="sign"></div>
+    <div class="actions" id="actions">
+      <button class="btn ghost" id="againBtn">↺ Xem lại</button>
+      <button class="btn" id="shareBtn">Chia sẻ 💝</button>
+    </div>
+  </div>
+</section>
+
+<button class="music" id="musicBtn" title="Bật/tắt nhạc">♪</button>
+<div class="toast" id="toast"></div>
+<script>
+const POEM = [
+  ['Tháng mười nắng nhạt sang thu',
+   'Gió heo may khẽ lời ru dịu dàng',
+   'Hôm nay muôn đóa hoa vàng',
+   'Gửi bao chị em đảm đang mỗi ngày'],
+  ['Văn phòng rộn rã sáng nay',
+   'Nhờ bao bóng hồng hăng say sớm chiều',
+   'Tận tâm, chu đáo, mến yêu',
+   'Gánh bao công việc, bao nhiêu nhọc nhằn'],
+  ['Vẫn tươi nụ cười ân cần',
+   'Cho văn phòng mãi ấm dần tình thân',
+   'Chị là chỗ dựa bao lần',
+   'Em là nắng sớm trong ngần ban mai'],
+  ['Việc nhà, việc nước cả hai',
+   'Đảm đang, giỏi giang, chẳng ai sánh bằng',
+   'Hôm nay hoa nở tung tăng',
+   'Ngàn lời chúc tụng xin dâng tặng người'],
+  ['Chúc chị em mãi rạng ngời',
+   'Trẻ trung, xinh đẹp, nụ cười trên môi',
+   'Sự nghiệp thăng tiến tuyệt vời',
+   'Gia đình êm ấm, đất trời bình an'],
+  ['Thay lời cảm tạ muôn vàn',
+   'Tặng bao chị em ngập tràn yêu thương!']
+];
+
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- hiệu ứng bay ---------- */
+const fx = $('fx');
+const HEART_PATH = 'M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z';
+const HEART_COLORS = ['#ff4d8d', '#ff7aa8', '#e0306f', '#ff9ec0', '#ff5c5c', '#ffb3c9'];
+const BALLOON_COLORS = ['#ff4d8d', '#ff7aa8', '#ffd27a', '#c58bff', '#ff6b6b', '#7ec8ff', '#ff9ec0'];
+const FLOWERS = ['🌸', '🌷', '🌹', '🌺', '💐', '🌼'];
+const rnd = (a, b) => a + Math.random() * (b - a);
+const pick = a => a[Math.floor(Math.random() * a.length)];
+let W = innerWidth, H = innerHeight;
+addEventListener('resize', () => { W = innerWidth; H = innerHeight; });
+
+const parts = [];
+function make(type, opts = {}) {
+  const el = document.createElement('div');
+  el.className = 'p ' + type;
+  let size;
+  if (type === 'heart') {
+    size = opts.size || rnd(14, 38);
+    el.style.width = el.style.height = size + 'px';
+    el.innerHTML = `<svg viewBox="0 0 24 22"><path fill="${pick(HEART_COLORS)}" d="${HEART_PATH}"/></svg>`;
+  } else if (type === 'balloon') {
+    size = rnd(34, 58);
+    el.style.setProperty('--s', size + 'px');
+    el.style.setProperty('--c', pick(BALLOON_COLORS));
+    el.innerHTML = '<div class="b"></div><div class="k"></div><div class="str"></div>';
+  } else {
+    size = rnd(20, 36);
+    el.style.setProperty('--s', size + 'px');
+    el.textContent = pick(FLOWERS);
+  }
+  fx.appendChild(el);
+  const p = { el, type, size, rot: rnd(0, 360), vr: rnd(-1.2, 1.2), ph: rnd(0, 6.28), life: opts.life || 0, age: 0, op: rnd(.75, 1) };
+  if (opts.x != null) { p.x = opts.x; p.y = opts.y; p.vx = opts.vx; p.vy = opts.vy; }
+  else reset(p, true);
+  parts.push(p);
+  return p;
+}
+function reset(p, first) {
+  if (p.type === 'balloon') { p.x = rnd(0, W); p.y = first ? rnd(H * .2, H + 200) : H + rnd(20, 160); p.vx = rnd(-.3, .3); p.vy = -rnd(.6, 1.4); }
+  else if (p.type === 'flower') { p.x = rnd(0, W); p.y = first ? rnd(-H, H) : -rnd(30, 120); p.vx = rnd(-.5, .5); p.vy = rnd(.6, 1.6); }
+  else { p.x = rnd(0, W); p.y = rnd(0, H); const a = rnd(0, 6.28), sp = rnd(.6, 2); p.vx = Math.cos(a) * sp; p.vy = Math.sin(a) * sp; }
+}
+const small = W < 600;
+for (let i = 0; i < (small ? 16 : 26); i++) make('heart');
+for (let i = 0; i < (small ? 8 : 12); i++) make('balloon');
+for (let i = 0; i < (small ? 12 : 20); i++) make('flower');
+
+let t = 0;
+function tick() {
+  t += 1;
+  for (let i = parts.length - 1; i >= 0; i--) {
+    const p = parts[i];
+    if (p.type === 'heart') {
+      if (p.life) { p.vy += .05; p.vx *= .985; p.vy *= .985; }
+      else {
+        p.vx += Math.cos(t * .02 + p.ph) * .06 + rnd(-.08, .08);
+        p.vy += Math.sin(t * .017 + p.ph * 1.3) * .06 + rnd(-.08, .08);
+        const sp = Math.hypot(p.vx, p.vy), max = 2.4;
+        if (sp > max) { p.vx = p.vx / sp * max; p.vy = p.vy / sp * max; }
+      }
+    } else if (p.type === 'balloon') {
+      p.vx = Math.sin(t * .015 + p.ph) * .5;
+    } else {
+      p.vx = Math.sin(t * .02 + p.ph) * .8;
+    }
+    p.x += p.vx; p.y += p.vy; p.rot += p.vr;
+    let op = p.op;
+    if (p.life) {
+      p.age++; op = Math.max(0, 1 - p.age / p.life);
+      if (p.age >= p.life) { p.el.remove(); parts.splice(i, 1); continue; }
+    } else if (p.type === 'heart') {
+      const m = p.size;
+      if (p.x < -m) p.x = W + m; else if (p.x > W + m) p.x = -m;
+      if (p.y < -m) p.y = H + m; else if (p.y > H + m) p.y = -m;
+    } else if (p.type === 'balloon' && p.y < -p.size * 3) reset(p);
+    else if (p.type === 'flower' && p.y > H + 40) reset(p);
+    const r = p.type === 'balloon' ? p.vx * 12 : p.rot;
+    p.el.style.transform = `translate(${p.x}px,${p.y}px) rotate(${r}deg)`;
+    p.el.style.opacity = op;
+  }
+  requestAnimationFrame(tick);
+}
+if (!reduce) requestAnimationFrame(tick);
+else parts.forEach(p => { p.el.style.transform = `translate(${p.x}px,${p.y}px)`; });
+
+function burst(x, y, n = 14) {
+  if (reduce) return;
+  for (let i = 0; i < n; i++) {
+    const a = rnd(0, 6.28), sp = rnd(2, 6);
+    make('heart', { x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 2, size: rnd(10, 24), life: Math.round(rnd(50, 90)) });
+  }
+}
+addEventListener('pointerdown', e => { if (!e.target.closest('button')) burst(e.clientX, e.clientY); });
+$('bigHeart').addEventListener('pointerdown', e => { e.stopPropagation(); burst(e.clientX, e.clientY, 26); });
+
+/* ---------- chuyển sang bài thơ ---------- */
+let timers = [];
+function showPoem() {
+  const r = $('nextBtn').getBoundingClientRect();
+  burst(r.left + r.width / 2, r.top, 30);
+  $('heartScene').classList.add('hide');
+  $('poemScene').classList.remove('hide');
+  $('poemScene').scrollTop = 0;
+  const box = $('poem'); box.innerHTML = '';
+  const lines = [];
+  POEM.forEach((st, si) => {
+    st.forEach((txt, li) => {
+      const s = document.createElement('span');
+      s.className = 'ln ' + (li % 2 === 0 ? 'l6' : 'l8');
+      s.textContent = txt;
+      box.appendChild(s); lines.push(s);
+    });
+    if (si < POEM.length - 1) { const g = document.createElement('span'); g.className = 'gap'; box.appendChild(g); }
+  });
+  $('sign').textContent = 'Chúc mừng ngày 20/10 💝';
+  $('sign').classList.remove('on'); $('actions').classList.remove('on');
+  timers.forEach(clearTimeout); timers = [];
+  const step = reduce ? 0 : 1100;
+  lines.forEach((s, i) => timers.push(setTimeout(() => {
+    s.classList.add('on');
+    const sc = $('poemScene'), rb = s.getBoundingClientRect();
+    if (rb.bottom > innerHeight - 60) sc.scrollBy({ top: rb.bottom - innerHeight + 120, behavior: 'smooth' });
+  }, 700 + i * step)));
+  const end = 700 + lines.length * step + 300;
+  timers.push(setTimeout(() => { $('sign').classList.add('on'); burst(innerWidth / 2, innerHeight * .6, 34); }, end));
+  timers.push(setTimeout(() => $('actions').classList.add('on'), end + 700));
+}
+function showHeart() {
+  timers.forEach(clearTimeout); timers = [];
+  $('poemScene').classList.add('hide');
+  $('heartScene').classList.remove('hide');
+}
+$('nextBtn').addEventListener('click', () => { startMusic(); showPoem(); });
+$('againBtn').addEventListener('click', showHeart);
+
+/* ---------- chia sẻ ---------- */
+function toast(msg) { const el = $('toast'); el.textContent = msg; el.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('show'), 2200); }
+$('shareBtn').addEventListener('click', async () => {
+  const link = location.href.split('?')[0];
+  if (navigator.share) { try { await navigator.share({ title: 'Chúc mừng 20/10 💝', text: 'Có một món quà nhỏ dành cho các chị em 🌷', url: link }); return; } catch (err) { if (err.name === 'AbortError') return; } }
+  try { await navigator.clipboard.writeText(link); toast('Đã sao chép link, gửi ngay thôi! 💌'); }
+  catch (err) { toast('Hãy copy link trên thanh địa chỉ để gửi nhé'); }
+});
+
+/* ---------- nhạc nền nhẹ (tự tạo bằng Web Audio, không cần file) ---------- */
+let actx = null, musicOn = false, musicTimer = null;
+const MELODY = [
+  [72, 1], [74, 1], [76, 2], [79, 1], [76, 1], [74, 2], [72, 1], [74, 1], [76, 1], [74, 1], [72, 4],
+  [76, 1], [77, 1], [79, 2], [81, 1], [79, 1], [77, 2], [76, 1], [74, 1], [72, 1], [74, 1], [76, 4]
+];
+const CHORDS = [[48, 55, 64], [45, 52, 60], [41, 48, 57], [43, 50, 59]];
+const hz = m => 440 * Math.pow(2, (m - 69) / 12);
+function note(m, start, dur, vol, type) {
+  const o = actx.createOscillator(), g = actx.createGain();
+  o.type = type; o.frequency.value = hz(m);
+  g.gain.setValueAtTime(0, start);
+  g.gain.linearRampToValueAtTime(vol, start + .03);
+  g.gain.exponentialRampToValueAtTime(.0001, start + dur);
+  o.connect(g).connect(actx.destination);
+  o.start(start); o.stop(start + dur + .05);
+}
+function playLoop() {
+  if (!musicOn) return;
+  const beat = .42, t0 = actx.currentTime + .05;
+  let tt = 0;
+  MELODY.forEach(([m, d]) => { note(m, t0 + tt * beat, d * beat * 1.6, .07, 'triangle'); tt += d; });
+  const bars = Math.ceil(tt / 4);
+  for (let b = 0; b < bars; b++) CHORDS[b % 4].forEach(m => note(m, t0 + b * 4 * beat, 4 * beat * 1.1, .025, 'sine'));
+  musicTimer = setTimeout(playLoop, tt * beat * 1000);
+}
+function startMusic() {
+  if (musicOn) return;
+  try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); actx.resume(); } catch (e) { return; }
+  musicOn = true; $('musicBtn').classList.add('on'); playLoop();
+}
+function stopMusic() { musicOn = false; clearTimeout(musicTimer); $('musicBtn').classList.remove('on'); }
+$('musicBtn').addEventListener('click', () => musicOn ? stopMusic() : startMusic());
+</script>
+</body>
+</html>
